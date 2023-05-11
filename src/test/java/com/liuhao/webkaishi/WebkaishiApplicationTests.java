@@ -1,11 +1,9 @@
 package com.liuhao.webkaishi;
 
-import com.liuhao.webkaishi.entity.Pager;
-import com.liuhao.webkaishi.entity.Tokens;
-import com.liuhao.webkaishi.entity.Url;
-import com.liuhao.webkaishi.entity.User;
+import com.liuhao.webkaishi.entity.*;
 import com.liuhao.webkaishi.mapper.TokensMapper;
 import com.liuhao.webkaishi.mapper.UrlMapper;
+import com.liuhao.webkaishi.mapper.UserFileMapper;
 import com.liuhao.webkaishi.mapper.UserMapper;
 import com.liuhao.webkaishi.service.impl.UserServiceImpl;
 import org.assertj.core.util.DateUtil;
@@ -60,6 +58,15 @@ class WebkaishiApplicationTests {
         Date date=new Date();
         long time = date.getTime();
         System.out.println(time);
+
+    }
+    @Autowired
+    UserFileMapper userFileMapper;
+    @Test
+    void selectShow(){
+        File file=new File();
+        file.setName("test1111");
+        userFileMapper.createShow(file);
 
     }
 

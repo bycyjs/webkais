@@ -50,6 +50,7 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addInterceptor(setBean2())
                 // 只拦截test路径
                 .addPathPatterns("/user/filter/**")
+                .addPathPatterns("/file/**")
                 // 不拦截pass路径
                 .excludePathPatterns("/pass/**");
     }

@@ -9,5 +9,13 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/userdata?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: liuhao12345
+  mvc:
+  servlet:
+    multipart:
+      max-file-size: 100MB  		# 设置单个文件最大大小为10MB
+      max-request-size: 100MB  	# 设置多个文件大小为100MB
 
+
+mybatis:
+  mapper-locations=classpath: com/liuhao/webkaisshhi/mapper/UserFileMapper.xml
 
